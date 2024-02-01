@@ -1,17 +1,20 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import '../style/Header.scss';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
-  return (
-    <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">SHOP HERE</nav>
-        <nav>
-        <Link to={"/"}>HOME</Link>
-        <Link to={"/Cart"}>Cart</Link>
-        <Link to={"/Help"}>Help</Link>
+    return (
+        <nav className='navbar'>
+          <h1>LOGO GO</h1>
+            <Link to={"/"}>HOME</Link>
+            <Link to={"/Cart"}>Cart</Link>
+            <Link to={"/Help"}>Help</Link>
+            <div className="Search">
+                <input type="text" list="city" placeholder="Search"/>
+                <button type="button">SEARCH</button>
+            </div>
         </nav>
-    </div>
-  )
-}
+    );
+};
 
-export default Header
+export default Header;
